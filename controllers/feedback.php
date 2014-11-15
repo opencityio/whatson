@@ -23,6 +23,9 @@ class Feedback
         }else {
             $response = new Response('Thank you for your feedback!', 200);
         }
+        $response->headers->set('Access-Control-Allow-Headers','Content-Type');
+        $response->headers->set('Access-Control-Allow-Methods','GET, POST, OPTIONS');
+
         $response->headers->set('Access-Control-Allow-Origin', '*');
         return $response;
     }
