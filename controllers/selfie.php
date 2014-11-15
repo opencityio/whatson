@@ -4,6 +4,7 @@ namespace Opencity;
 
 use Silex\Application;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 
 
 class Selfie
@@ -16,7 +17,12 @@ class Selfie
         list(, $data)      = explode(',', $data);
         $data = base64_decode($data);
 
-        file_put_contents(__DIR__.'/../selfies/'.mktime().'.png', $data);
-        return '';
+
+        header('Access-Control-Allow-Origin: *');
+
+        if ( FALSE == file_put_contents(__DIR__.'/../selfies/'.mktime().'.png', $data) ) {
+            return new Response('Bad Request', 400);
+        };
+        return new Response('Your image - added to the Face of Peterborough!', 200);
     }
 }
