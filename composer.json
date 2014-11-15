@@ -1,7 +1,6 @@
 {
     "require" : {
         "silex/silex": "~1.1",
-        "fastfeed/fastfeed": "dev-master",
-        "gregwar/cache": "1.0.*"
+        "fastfeed/fastfeed": "dev-master"
     }
 }

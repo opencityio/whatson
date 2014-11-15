@@ -4,7 +4,7 @@ namespace Whatson;
 
 use Silex\Application;
 use FastFeed\Factory as FFFactory;
-use Gregwar\Cache\Cache;
+
 
 
 class Event
@@ -12,19 +12,6 @@ class Event
     public function fetchEvents(Application $app)
     {
 
-//        $cache = new Cache;
-//        $cache->setCacheDirectory('cache'); // This is the default
-//
-//// If the cache exists, this will return it, else, the closure will be called
-//// to create this image
-//        $data = $cache->getOrCreate('red-square.png', array(), function($filename) {
-//            $i = imagecreatetruecolor(100, 100);
-//            imagefill($i, 0, 0, 0xff0000);
-//            imagepng($i, $filename);
-//        });
-//
-//        header('Content-type: image/png');
-//        echo $data;
 
         $allowedCategories = array(
             "Dance", "Art", "Sport", "Music", "Theatre", "Event"
