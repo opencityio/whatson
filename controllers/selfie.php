@@ -17,9 +17,6 @@ class Selfie
         list(, $data)      = explode(',', $data);
         $data = base64_decode($data);
 
-
-        header('Access-Control-Allow-Origin: *');
-
         if ( FALSE == file_put_contents(__DIR__.'/../selfies/'.mktime().'.png', $data) ) {
             $response = new Response('Bad Request', 400);
         }else {
