@@ -26,7 +26,7 @@ set :log_level, :debug
 
 set :linked_files, %w{}
 #config/db.php}
-set :linked_dirs, %w{selfies}
+set :linked_dirs, %w{selfies,feedback}
 
 namespace :deploy do
   desc 'Restart application'
