@@ -24,7 +24,7 @@ $app['debug'] = true;
 /**
  * Controllers
  */
-$app->get('/whats-on', 'Whatson\event::fetchEvents');
+$app->get('/whats-on', 'Opencity\event::fetchEvents');
 
 /**
  * Run
