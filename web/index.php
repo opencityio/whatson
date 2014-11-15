@@ -7,21 +7,17 @@ use Silex\Application;
 // =======================================================================================================================================
 
 /**
- * Include Everything loaded by composer, silex, doctrine etc
+ * Include Everything loaded by composer, silex
  */
 require_once __DIR__.'/../vendor/autoload.php';
-require_once __DIR__.'/../config/db.php';
-
 require_once __DIR__ . '/../controllers/event.php';
 
 
 
 /**
- * Setup Silex and Doctrine
+ * Setup Silex
  */
 $app = new Silex\Application();
-$app->register(new Silex\Provider\DoctrineServiceProvider(), $dbOptions); // Commented out temporarily as we don't know the db details
-
 $app['debug'] = true;
 
 
