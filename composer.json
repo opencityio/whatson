@@ -1,6 +1,7 @@
 {
     "require" : {
         "silex/silex": "~1.1",
-        "fastfeed/fastfeed": "dev-master"
+        "fastfeed/fastfeed": "dev-master",
+        "desarrolla2/cache":  "dev-master"
     }
 }

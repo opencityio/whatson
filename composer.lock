@@ -4,20 +4,20 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "9f6f572033b72f217e95bc543e0e7080",
+    "hash": "dab97b7f324ce115b822e1fd8ba1c858",
     "packages": [
         {
             "name": "desarrolla2/cache",
-            "version": "v1.8.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/desarrolla2/Cache.git",
-                "reference": "a4fe5e0015b497099613e9cf80f37e445de077a2"
+                "reference": "bbd69e4580e1992e3482c3e3b720bb08bc9398c7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/desarrolla2/Cache/zipball/a4fe5e0015b497099613e9cf80f37e445de077a2",
-                "reference": "a4fe5e0015b497099613e9cf80f37e445de077a2",
+                "url": "https://api.github.com/repos/desarrolla2/Cache/zipball/bbd69e4580e1992e3482c3e3b720bb08bc9398c7",
+                "reference": "bbd69e4580e1992e3482c3e3b720bb08bc9398c7",
                 "shasum": ""
             },
             "require": {
@@ -30,7 +30,7 @@
             },
             "type": "library",
             "autoload": {
-                "psr-0": {
+                "psr-4": {
                     "Desarrolla2\\Cache\\": "src/"
                 }
             },
@@ -56,7 +56,7 @@
                 "mysql",
                 "redis"
             ],
-            "time": "2014-11-06 11:33:50"
+            "time": "2014-11-13 08:22:51"
         },
         {
             "name": "ezyang/htmlpurifier",
@@ -188,49 +188,6 @@
             ],
             "description": "Simple Library to manage Urls",
             "time": "2014-02-25 15:36:50"
-        },
-        {
-            "name": "gregwar/cache",
-            "version": "v1.0.10",
-            "target-dir": "Gregwar/Cache",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Gregwar/Cache.git",
-                "reference": "0a1a02e4943e95f491b3d2395609247385975622"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Gregwar/Cache/zipball/0a1a02e4943e95f491b3d2395609247385975622",
-                "reference": "0a1a02e4943e95f491b3d2395609247385975622",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "Gregwar\\Cache": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Gregwar",
-                    "email": "g.passault@gmail.com"
-                }
-            ],
-            "description": "A lightweight file-system cache system",
-            "keywords": [
-                "cache",
-                "caching",
-                "file-system",
-                "system"
-            ],
-            "time": "2014-09-24 11:23:30"
         },
         {
             "name": "guzzle/guzzle",
@@ -802,7 +759,8 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "fastfeed/fastfeed": 20
+        "fastfeed/fastfeed": 20,
+        "desarrolla2/cache": 20
     },
     "prefer-stable": false,
     "platform": [],
