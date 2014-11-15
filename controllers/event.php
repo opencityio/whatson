@@ -12,9 +12,6 @@ class Event
 {
     public function fetchEvents(Application $app)
     {
-
-
-
         $cacheDir = '/tmp';
         $adapter = new File($cacheDir);
         $adapter->setOption('ttl', 300);
