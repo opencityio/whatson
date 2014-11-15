@@ -11,6 +11,7 @@ use Silex\Application;
  */
 require_once __DIR__.'/../vendor/autoload.php';
 require_once __DIR__ . '/../controllers/event.php';
+require_once __DIR__ . '/../controllers/selfie.php';
 
 
 
@@ -24,7 +25,8 @@ $app['debug'] = true;
 /**
  * Controllers
  */
-$app->get('/', 'Whatson\event::fetchEvents');
+$app->get('/whats-on', 'Opencity\event::fetchEvents');
+$app->post('/selfie', 'Opencity\selfie::saveImage');
 
 /**
  * Run

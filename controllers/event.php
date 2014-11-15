@@ -1,6 +1,6 @@
 <?php
 
-namespace Whatson;
+namespace Opencity;
 
 use Silex\Application;
 use FastFeed\Factory as FFFactory;
