@@ -15,6 +15,7 @@ use Mongo\Silex\Provider\MongoServiceProvider;
 require_once __DIR__.'/../vendor/autoload.php';
 require_once __DIR__ . '/../controllers/event.php';
 require_once __DIR__ . '/../controllers/selfie.php';
+require_once __DIR__ . '/../controllers/feedback.php';
 
 
 
@@ -40,6 +41,7 @@ $app['debug'] = true;
  */
 $app->get('/whats-on', 'Opencity\event::fetchEvents');
 $app->post('/selfie', 'Opencity\selfie::saveImage');
+$app->post('/feedback', 'Opencity\feedback::saveData');
 
 /**
  * Run
