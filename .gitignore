@@ -3,3 +3,4 @@ vendor
 config/db.php
 selfies/*.png
 feedback/*.json
+config/twit.json

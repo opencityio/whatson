@@ -24,7 +24,7 @@ set :branch, :develop
 
 set :log_level, :debug
 
-set :linked_files, %w{}
+set :linked_files, %w{config/twit.json}
 #config/db.php}
 set :linked_dirs, %w{selfies feedback}
 
