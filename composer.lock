@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "dab97b7f324ce115b822e1fd8ba1c858",
+    "hash": "dd46080cf65c05aa1c5e3bb53c111363",
     "packages": [
         {
             "name": "desarrolla2/cache",
@@ -280,6 +280,54 @@
                 "web service"
             ],
             "time": "2014-08-11 04:32:36"
+        },
+        {
+            "name": "moriony/silex-mongo-provider",
+            "version": "1.2.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/moriony/silex-mongo-provider.git",
+                "reference": "ce03a607fe60dc5dad359c5c7051767f3dcd8068"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/moriony/silex-mongo-provider/zipball/ce03a607fe60dc5dad359c5c7051767f3dcd8068",
+                "reference": "ce03a607fe60dc5dad359c5c7051767f3dcd8068",
+                "shasum": ""
+            },
+            "require": {
+                "pimple/pimple": "*",
+                "silex/silex": "1.*"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "3.7.*",
+                "satooshi/php-coveralls": "*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Mongo\\Silex": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Vitaliy Chesnokov",
+                    "email": "demateus@gmail.com"
+                }
+            ],
+            "description": "Mongo service provider for the Silex framwork.",
+            "homepage": "https://github.com/moriony/silex-mongo-provider",
+            "keywords": [
+                "database",
+                "mongo",
+                "mongodb",
+                "silex"
+            ],
+            "time": "2014-03-09 08:05:37"
         },
         {
             "name": "pimple/pimple",

@@ -2,6 +2,7 @@
     "require" : {
         "silex/silex": "~1.1",
         "fastfeed/fastfeed": "dev-master",
-        "desarrolla2/cache":  "dev-master"
+        "desarrolla2/cache":  "dev-master",
+        "moriony/silex-mongo-provider": "*"
     }
 }
