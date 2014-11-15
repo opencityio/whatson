@@ -24,7 +24,7 @@ $app['debug'] = true;
 /**
  * Controllers
  */
-$app->get('/whatson', 'Whatson\event::fetchEvents');
+$app->get('/what-son', 'Whatson\event::fetchEvents');
 
 /**
  * Run
