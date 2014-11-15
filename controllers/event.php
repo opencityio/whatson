@@ -35,7 +35,7 @@ class Event
                 $filteredCats = array_values(array_intersect(array_values($categories), $allowedCategories));
 
                 $feedItem = array(
-                    'id' => $item->getId(),
+                    'id' => uniqid(),
                     'title' => $item->getName(),
                     'date' => $item->getDate()->format('Y-m-d H:i:s'),
                     'category' => count($filteredCats) > 0 ? $filteredCats[0] : '',
