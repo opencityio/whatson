@@ -12,12 +12,11 @@ class Selfie
     {
         $imageData = $request->get('image');
 
-        $connections = $app['mongo'];
-        $defaultConnection = $connections['default'];
+        list($type, $data) = explode(';', $imageData);
+        list(, $data)      = explode(',', $data);
+        $data = base64_decode($data);
 
-        $defaultConnection->showDatabases();
-
-
+        file_put_contents(__DIR__.'/../selfies/'.mktime().'.png', $data);
         return '';
     }
 }
