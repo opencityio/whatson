@@ -5,10 +5,13 @@ namespace Whatson;
 use Silex\Application;
 use FastFeed\Factory as FFFactory;
 
+
+
 class Event
 {
     public function fetchEvents(Application $app)
     {
+
 
         $allowedCategories = array(
             "Dance", "Art", "Sport", "Music", "Theatre", "Event"
@@ -34,7 +37,7 @@ class Event
             $feedItems[] = $feedItem;
         }
 
-
+        header('Access-Control-Allow-Origin: *');
         return $app->json($feedItems);
     }
 }
