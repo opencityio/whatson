@@ -19,9 +19,11 @@ class Feedback
         $feedbackJson = json_encode($feedbackData);
         header('Access-Control-Allow-Origin: *');
         if ( FALSE == file_put_contents($fileName, $feedbackJson) ) {
-            return new Response('Bad Request', 400);
-        };
-        return new Response('Thank you for your feedback!', 200);
-
+            $response = new Response('Bad Request', 400);
+        }else {
+            $response = new Response('Thank you for your feedback!', 200);
+        }
+        $response->headers->set('Access-Control-Allow-Origin', '*');
+        return $response;
     }
 }

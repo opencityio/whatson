@@ -21,8 +21,11 @@ class Selfie
         header('Access-Control-Allow-Origin: *');
 
         if ( FALSE == file_put_contents(__DIR__.'/../selfies/'.mktime().'.png', $data) ) {
-            return new Response('Bad Request', 400);
-        };
-        return new Response('Your image - added to the Face of Peterborough!', 200);
+            $response = new Response('Bad Request', 400);
+        }else {
+            $response = new Response('Your image - added to the Face of Peterborough!', 200);
+        }
+        $response->headers->set('Access-Control-Allow-Origin', '*');
+        return $response;
     }
 }
