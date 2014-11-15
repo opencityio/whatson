@@ -23,11 +23,12 @@ class Event
         $feedItems = array();
         foreach ($items as $item) {
             $categories = $item->getTags();
+            $filteredCats = array_values(array_intersect(array_values($categories), $allowedCategories));
 
             $feedItem = array(
                 'title' => $item->getName(),
                 'date' => $item->getDate()->format('Y-m-d H:i:s'),
-                'category' => array_values(array_intersect(array_values($categories), $allowedCategories)),
+                'category' => count($filteredCats) > 0 ? $filteredCats[0] : '',
                 'description' => $item->getIntro()
             );
             $feedItems[] = $feedItem;
