@@ -38,11 +38,6 @@ $app->before(function (Request $request) {
     }
 }, Application::EARLY_EVENT);
 
-//handling CORS respons with right headers
-$app->after(function (Request $request, Response $response) {
-    $response->headers->set("Access-Control-Allow-Methods","GET,POST,PUT,DELETE,OPTIONS");
-    $response->headers->set("Access-Control-Allow-Origin","*");
-});
 
 
 
@@ -70,6 +65,14 @@ $app['debug'] = true;
 $app->get('/whats-on', 'Opencity\event::fetchEvents');
 $app->post('/selfie', 'Opencity\selfie::saveImage');
 $app->post('/feedback', 'Opencity\feedback::saveData');
+
+
+
+//handling CORS respons with right headers
+$app->after(function (Request $request, Response $response) {
+    $response->headers->set("Access-Control-Allow-Methods","GET,POST,PUT,DELETE,OPTIONS");
+    $response->headers->set("Access-Control-Allow-Origin","*");
+});
 
 /**
  * Run
