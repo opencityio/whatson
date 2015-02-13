@@ -1,6 +1,7 @@
 {
     "require" : {
         "silex/silex": "~1.1",
+        "guzzlehttp/guzzle": "~5.0",
         "fastfeed/fastfeed": "dev-master",
         "desarrolla2/cache":  "dev-master",
         "moriony/silex-mongo-provider": "*",
