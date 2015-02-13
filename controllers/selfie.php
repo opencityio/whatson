@@ -50,6 +50,7 @@ class Selfie
 
         }
 
+        header('Access-Control-Allow-Origin: *');
         return $response;
     }
 }
