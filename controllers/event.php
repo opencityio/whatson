@@ -48,8 +48,7 @@ class Event
 
         $feedItems = $cache->get('feed');
 
-        header_remove('Access-Control-Allow-Origin');
-        header('Access-Control-Allow-Origin: *');
+        //header('Access-Control-Allow-Origin: *');
         return $app->json($feedItems);
     }
 }
