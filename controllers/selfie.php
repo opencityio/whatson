@@ -36,7 +36,7 @@ class Selfie
         $fileName = __DIR__.'/../selfies/'.mktime().'.png';
         if ( FALSE == file_put_contents($fileName, $data) ) {
 
-            $response = new JsonResponse('Bad Request', 400);
+            $response = new JsonResponse('Bad Request - '.$data, 400);
         }else {
             $response = new JsonResponse('Your image - added to the Face of Peterborough!', 200);
             if ( $cb = $this->getTwitter() ){
