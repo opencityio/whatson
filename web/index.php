@@ -29,7 +29,7 @@ $app = new Silex\Application();
 $app->before(function (Request $request) {
     if ($request->getMethod() === "OPTIONS") {
         $response = new Response();
-        //$response->headers->set("Access-Control-Allow-Origin",'*');
+        $response->headers->set("Access-Control-Allow-Origin",'*');
         $response->headers->set("Access-Control-Allow-Methods","GET,POST,PUT,DELETE,OPTIONS");
         $response->headers->set("Access-Control-Allow-Headers","Content-Type");
         $response->setStatusCode(200);
