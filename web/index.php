@@ -62,9 +62,9 @@ $app['debug'] = true;
  */
 
 // accept OPTIONS requests for angular
-//$app->match("{url}",function($url) use ($app){
-//    return "OK";
-//})->assert('url', '.*')->method("OPTIONS");
+$app->match("{url}",function($url) use ($app){
+    return "OK";
+})->assert('url', '.*')->method("OPTIONS");
 
 $app->get('/whats-on', 'Opencity\event::fetchEvents');
 $app->post('/selfie', 'Opencity\selfie::saveImage');
