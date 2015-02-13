@@ -5,6 +5,7 @@ namespace Opencity;
 use Silex\Application;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Codebird\Codebird;
 
 
@@ -34,10 +35,10 @@ class Selfie
 
         $fileName = __DIR__.'/../selfies/'.mktime().'.png';
         if ( FALSE == file_put_contents($fileName, $data) ) {
-            $response = new Response('Bad Request', 400);
-        }else {
-            $response = new Response('Your image - added to the Face of Peterborough!', 200);
 
+            $response = new JsonResponse('Bad Request', 400);
+        }else {
+            $response = new JsonResponse('Your image - added to the Face of Peterborough!', 200);
             if ( $cb = $this->getTwitter() ){
 
                 $params = array(
@@ -49,9 +50,7 @@ class Selfie
 
         }
 
-        $response->headers->set('Access-Control-Allow-Headers','Content-Type');
-        $response->headers->set('Access-Control-Allow-Methods','GET, POST, OPTIONS');
-        $response->headers->set('Access-Control-Allow-Origin', '*');
+        header('Access-Control-Allow-Origin: *');
         return $response;
     }
 }
