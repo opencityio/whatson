@@ -39,7 +39,7 @@ class Event
                     'title' => $item->getName(),
                     'date' => $item->getDate()->format('Y-m-d H:i:s'),
                     'category' => count($filteredCats) > 0 ? $filteredCats[0] : '',
-                    'description' => $item->getIntro()
+                    'description' => $item->getDescription()
                 );
                 $feedItems[] = $feedItem;
             }
