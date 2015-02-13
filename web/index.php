@@ -75,5 +75,6 @@ $app->post('/feedback', 'Opencity\feedback::saveData');
  * Run
  */
 
+header_remove('Access-Control-Allow-Origin');
 header('Access-Control-Allow-Origin: *');
 $app->run();
