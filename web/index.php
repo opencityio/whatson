@@ -39,10 +39,10 @@ $app->before(function (Request $request) {
 }, Application::EARLY_EVENT);
 
 //handling CORS respons with right headers
-$app->after(function (Request $request, Response $response) {
-    $response->headers->set("Access-Control-Allow-Methods","GET,POST,PUT,DELETE,OPTIONS");
-    $response->headers->set("Access-Control-Allow-Origin","*");
-});
+//$app->after(function (Request $request, Response $response) {
+//    $response->headers->set("Access-Control-Allow-Methods","GET,POST,PUT,DELETE,OPTIONS");
+//    $response->headers->set("Access-Control-Allow-Origin","*");
+//});
 
 
 
